@@ -30,13 +30,13 @@ public class RatingServiceImpl implements RatingService {
 	}
 
 	@Override
-	public List<RatingDto> getRatingByUserId(String userId) {
+	public List<RatingDto> getAllRatingsByUserId(String userId) {
 		return ratingRepository.findByUserId(userId).stream().map(
 				rating -> entityToDto(rating)).collect(Collectors.toList());
 	}
 
 	@Override
-	public List<RatingDto> getRatingByHotelId(String hotelId) {
+	public List<RatingDto> getAllRatingsByHotelId(String hotelId) {
 		return ratingRepository.findByHotelId(hotelId).stream().map(
 				rating -> entityToDto(rating)).collect(Collectors.toList());
 	}

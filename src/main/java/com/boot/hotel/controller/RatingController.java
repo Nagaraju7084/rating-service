@@ -34,12 +34,12 @@ public class RatingController {
 	
 	@GetMapping("/users/{userId}")
 	public ResponseEntity<List<RatingDto>> getAllRatingByUserId(@PathVariable String userId){
-		return new ResponseEntity<List<RatingDto>>(ratingService.getRatingByUserId(userId), HttpStatus.OK);
+		return new ResponseEntity<List<RatingDto>>(ratingService.getAllRatingsByUserId(userId), HttpStatus.OK);
 	}
 	
 	@GetMapping("/hotels/{hotelId}")
 	public ResponseEntity<List<RatingDto>> getAllRatingsByHotelId(@PathVariable String hotelId){
-		return new ResponseEntity<List<RatingDto>>(ratingService.getRatingByHotelId(hotelId), HttpStatus.OK);
+		return new ResponseEntity<List<RatingDto>>(ratingService.getAllRatingsByHotelId(hotelId), HttpStatus.OK);
 	}
 	
 }

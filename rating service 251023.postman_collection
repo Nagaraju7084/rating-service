@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "6e7f0d22-fd67-4617-8ffa-70482a4d3215",
+		"name": "rating service 241023",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29966144"
+	},
+	"item": [
+		{
+			"name": "get all ratings",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create rating",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get all ratings by hotel id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get all ratings by user id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
