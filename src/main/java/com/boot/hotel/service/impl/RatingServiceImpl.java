@@ -1,6 +1,7 @@
 package com.boot.hotel.service.impl;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
@@ -20,6 +21,9 @@ public class RatingServiceImpl implements RatingService {
 
 	@Override
 	public RatingDto createRating(RatingDto ratingDto) {
+		//generate unique ratingId
+		String randomUserId = UUID.randomUUID().toString();
+		ratingDto.setRatingId(randomUserId);
 		return entityToDto(ratingRepository.save(dtoToEntity(ratingDto)));
 	}
 
@@ -50,6 +54,11 @@ public class RatingServiceImpl implements RatingService {
 	private RatingDto entityToDto(Rating rating) {
 		RatingDto ratingDto = new RatingDto();
 		BeanUtils.copyProperties(rating, ratingDto);
+		/*ratingDto.setRatingId(rating.getRatingId());
+		ratingDto.setRating(rating.getRating());
+		ratingDto.setFeedback(rating.getFeedback());
+		ratingDto.setUserId(rating.getUserId());
+		ratingDto.setHotelId(rating.getHotelId());*/
 		return ratingDto;
 	}
 
